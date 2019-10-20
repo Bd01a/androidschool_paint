@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">androidschool_paint</string>
+    <string name="points">Точки</string>
+    <string name="line">Линия</string>
+    <string name="rectangle">Квадрат</string>
+    <string name="black">черный</string>
+    <string name="red">красный</string>
+    <string name="blue">синий</string>
+</resources>

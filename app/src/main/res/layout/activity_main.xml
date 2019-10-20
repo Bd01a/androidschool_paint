@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/tools_padding"
+        >
+   <Spinner
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:id="@+id/spinner_color"
+       android:paddingLeft="@dimen/tools_padding"
+       android:layout_weight="1"
+       />
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/tools_padding"
+            android:layout_weight="1"
+            android:text="Очистить"
+            />
+    </LinearLayout>
+
+
+
+    <com.fed.androidschool_paint.PaintView
+        android:id="@+id/paint_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/tools_padding"
+        >
+        <RadioButton
+            android:id="@+id/radbutton_point"
+            android:text="@string/points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/radbutton_line"
+            android:text="@string/line"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/radbutton_rect"
+            android:layout_width="0dp"
+            android:text="@string/rectangle"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+</LinearLayout>

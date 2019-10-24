@@ -5,7 +5,7 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
-public class Rectangle implements Drawable{
+public class Rectangle implements Drawn {
     private PointF mStart;
     private PointF mEnd;
 
@@ -22,24 +22,24 @@ public class Rectangle implements Drawable{
         mPaint = paint;
     }
 
-    private RectF getRectF(){
-        return new RectF(getLeft(),getTop(),getRight(),getBottom());
+    private RectF getRectF() {
+        return new RectF(getLeft(), getTop(), getRight(), getBottom());
     }
 
-    private float getLeft(){
-        return Math.min(mStart.x,mEnd.x);
+    private float getLeft() {
+        return Math.min(mStart.x, mEnd.x);
     }
 
-    private float getRight(){
-        return Math.max(mStart.x,mEnd.x);
+    private float getRight() {
+        return Math.max(mStart.x, mEnd.x);
     }
 
-    private float getTop(){
-        return Math.min(mStart.y,mEnd.y);
+    private float getTop() {
+        return Math.min(mStart.y, mEnd.y);
     }
 
-    private float getBottom(){
-        return Math.max(mStart.y,mEnd.y);
+    private float getBottom() {
+        return Math.max(mStart.y, mEnd.y);
     }
 
     private PointF getStart() {
@@ -57,7 +57,6 @@ public class Rectangle implements Drawable{
     public void setEnd(PointF end) {
         this.mEnd = end;
     }
-
 
 
     @Override

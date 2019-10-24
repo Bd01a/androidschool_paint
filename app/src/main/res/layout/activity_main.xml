@@ -73,6 +73,15 @@
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             />
+        <RadioButton
+            android:id="@+id/radbutton_polygon"
+            android:layout_width="0dp"
+            android:text="@string/polygon"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
 
 </LinearLayout>

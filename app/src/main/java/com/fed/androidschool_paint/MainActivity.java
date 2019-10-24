@@ -1,18 +1,14 @@
 package com.fed.androidschool_paint;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.Switch;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         final RadioButton pointRadButton = findViewById(R.id.radbutton_point);
         final RadioButton lineRadButton = findViewById(R.id.radbutton_line);
         final RadioButton rectRadButton = findViewById(R.id.radbutton_rect);
+        final RadioButton polygonRadButton = findViewById(R.id.radbutton_polygon);
 
         paintView = findViewById(R.id.paint_view);
 
@@ -39,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Spinner spinner = findViewById(R.id.spinner_color);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_expandable_list_item_1,paintView.getNamesColorPaints());
+                android.R.layout.simple_expandable_list_item_1, paintView.getNamesColorPaints());
         spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -60,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 paintView.setDrawType(PaintView.DRAW_POINT);
                 lineRadButton.setChecked(false);
                 rectRadButton.setChecked(false);
+                polygonRadButton.setChecked(false);
             }
         });
 
@@ -69,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 paintView.setDrawType(PaintView.DRAW_LINE);
                 pointRadButton.setChecked(false);
                 rectRadButton.setChecked(false);
+                polygonRadButton.setChecked(false);
             }
         });
 
@@ -78,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
                 paintView.setDrawType(PaintView.DRAW_RECT);
                 lineRadButton.setChecked(false);
                 pointRadButton.setChecked(false);
+                polygonRadButton.setChecked(false);
+            }
+        });
+
+        polygonRadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                paintView.setDrawType(PaintView.DRAW_POLYGON);
+                lineRadButton.setChecked(false);
+                pointRadButton.setChecked(false);
+                rectRadButton.setChecked(false);
             }
         });
 

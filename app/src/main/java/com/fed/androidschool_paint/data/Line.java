@@ -4,7 +4,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PointF;
 
-public class Line implements Drawable{
+public class Line implements Drawn {
     private PointF mStart;
     private PointF mEnd;
 
@@ -18,7 +18,7 @@ public class Line implements Drawable{
 
     public Line(int startX, int startY, int endX, int endY) {
         this.mStart = new PointF(startX, startY);
-        this.mEnd = new PointF(endX,endY);
+        this.mEnd = new PointF(endX, endY);
     }
 
     public Line() {
@@ -53,6 +53,6 @@ public class Line implements Drawable{
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawLine(mStart.x,mStart.y,mEnd.x,mEnd.y,mPaint);
+        canvas.drawLine(mStart.x, mStart.y, mEnd.x, mEnd.y, mPaint);
     }
 }

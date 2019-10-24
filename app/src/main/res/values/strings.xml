@@ -6,4 +6,5 @@
     <string name="black">черный</string>
     <string name="red">красный</string>
     <string name="blue">синий</string>
+    <string name="polygon">Многоугольник</string>
 </resources>

@@ -4,16 +4,21 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Parcel;
-import android.os.Parcelable;
 
 
-public class Point implements Drawable {
+
+public class Point implements Drawn {
     Path mPath;
-    Paint mPaint;
+    private Paint mPaint;
+    //private float[][] points;
 
     public Point(Path mPath, Paint mPaint) {
         this.mPath = mPath;
         this.mPaint = mPaint;
+    }
+
+    public void moveTo(){
+
     }
 
     public Point(Paint mPaint) {
@@ -43,7 +48,7 @@ public class Point implements Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawPath(getPath(),getPaint());
+        canvas.drawPath(getPath(), getPaint());
     }
 
 }
